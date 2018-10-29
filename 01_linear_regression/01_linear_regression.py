@@ -1,5 +1,7 @@
-import tensorflow as tf
+import os # Just disables the warning, doesn't enable AVX/FMA
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+import tensorflow as tf
 X = tf.placeholder(tf.float32, [None,3])
 x_data = [[1,2,3],[5,6,7]]
 
